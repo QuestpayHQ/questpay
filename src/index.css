@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 @font-face {
   font-family: "Rebond Grotesque";
   src: url("/rebond-grotesque-font-family-1767748310-0/ESRebondGrotesqueTRIAL-Hairline-BF661890413e3d1.otf") format("opentype");
@@ -150,8 +152,8 @@
   --background: #ffffff;
   --secondary: #f9f9f9;
   --foreground: #f5f5f5;
-  --main: #555;
-  --muted: #6B6C73;
+  --main: #444;
+  --muted: #858688;
   --primary: #8e82fc;
   --line: #e6e6e6;
 }
@@ -168,6 +170,7 @@
 
 @theme inline {
   --font-sans: "Rebond Grotesque", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-secondary: var(--secondary);

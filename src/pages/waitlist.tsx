@@ -95,12 +95,12 @@ export default function Waitlist() {
           </p>
         </div>
 
-          <ul className="flex flex-wrap items-center justify-center gap-3 px-2 py-1">
+          <ul className="flex flex-wrap items-center justify-center gap-3 px-2 py-1 max-w-[700px] mx-auto">
             {services.map((service, idx) => (
               <li
                 key={service.name}
                 className={clsx(
-                  "inline-block cursor-pointer animate-bounce rounded-full border px-4 py-2 text-xs transition-all duration-300 ease-out hover:rotate-0",
+                  "inline-block cursor-pointer animate-bounce rounded-full border px-4 py-2 text-xs sm:text-sm md:text-base transition-all duration-300 ease-out hover:rotate-0",
                   service.palette,
               idx % 2 === 1 ? "rotate-2" : "-rotate-2"
                 )}

@@ -1,0 +1,6 @@
+export { default as Header } from './header'
+export { default as Footer } from './footer'
+export { default as Services } from './services'
+export { default as Transactions } from './transactions'
+export { default as Settings } from './settings'
+export { default as WalletCard } from './wallet-card'
