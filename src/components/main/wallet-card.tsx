@@ -143,7 +143,7 @@ export default function WalletCard() {
       <div className="grid grid-cols-2 gap-4">
         <Link
           to="/fund-account"
-          className="btn bg-amber-500 text-amber-100 font-semibold h-11 w-full rounded-xl px-4 text-sm"
+          className="btn bg-amber-500 dark:bg-foreground dark:text-main text-amber-100 font-semibold h-11 w-full rounded-xl px-4 text-sm"
         >
           Fund account <AddCircle size={20} variant="Bold" />
         </Link>
