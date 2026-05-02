@@ -156,6 +156,16 @@
   --line: #e6e6e6;
 }
 
+.dark {
+  --background: #151b23;
+  --secondary: #212830;
+  --foreground: #2a313c;
+  --main: #fff;
+  --muted: #999;
+  --primary: #8e82fc;
+  --line: #3d444d;
+}
+
 @theme inline {
   --font-sans: "Rebond Grotesque", sans-serif;
   --color-background: var(--background);
@@ -193,7 +203,7 @@ button,
 }
 
 .btn-primary {
-  @apply text-white dark:text-[#171717] bg-primary font-medium;
+  @apply text-white bg-primary font-medium;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

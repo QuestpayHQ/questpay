@@ -1,5 +1,5 @@
 import { Toaster } from 'sonner'
-import { Home } from './pages'
+import { Waitlist } from './pages'
 import { Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/ui/ScrollToTop'
 
@@ -11,7 +11,7 @@ export default function App() {
       />
     <ScrollToTop />
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Waitlist />} />
     </Routes>
     </>
   )

@@ -1,1 +1,1 @@
-export { default as Home } from './home'
+export { default as Waitlist } from './waitlist'
