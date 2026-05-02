@@ -11,32 +11,32 @@ const services = [
   {
     name: "Questbills",
     palette:
-      "border-sky-300/80 bg-sky-50 text-sky-600",
+      "border-sky-300/20 bg-sky-50 text-sky-600",
   },
   {
     name: "QuestSms",
     palette:
-      "border-emerald-300/80 bg-emerald-50 text-emerald-500",
+      "border-emerald-300/20 bg-emerald-50 text-emerald-600",
   },
   {
     name: "QuestBoost",
     palette:
-      "border-amber-300/80 bg-yellow-50 text-yellow-600",
+      "border-amber-300/20 bg-yellow-50 text-yellow-600",
   },
   {
     name: "QuestSocials",
     palette:
-      "border-slate-300/80 bg-slate-100 text-slate-500",
+      "border-slate-300/20 bg-slate-100 text-slate-600",
   },
   {
     name: "QuestCard",
     palette:
-      "border-violet-300/80 bg-violet-50 text-violet-500",
+      "border-violet-300/20 bg-violet-50 text-violet-600",
   },
   {
     name: "QuestLoan",
     palette:
-      "border-blue-300/80 bg-blue-50 text-blue-500",
+      "border-blue-300/20 bg-blue-50 text-blue-600",
   },
 ] as const;
 
