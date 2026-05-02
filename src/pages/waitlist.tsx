@@ -57,6 +57,14 @@ const services = [
     palette:
       "border-blue-300/20 bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400",
   },
+  {
+    name: "Developer API",
+    description:
+      "Integrate Questpay features directly into your apps with secure, scalable APIs.",
+    imageUrl: "",
+    palette:
+      "border-red-300/20 bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400",
+  },
 ] as const;
 
 export default function Waitlist() {
