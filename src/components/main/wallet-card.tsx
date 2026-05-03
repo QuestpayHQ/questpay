@@ -95,7 +95,7 @@ export default function WalletCard() {
       </div> */}
 
     
-        <div className="text-center space-y-4 overflow-hidden flex-col min-h-50 rounded-2xl bg-linear-to-br from-violet-900 via-violet-900 to-primary pt-6">
+        <div className="text-center space-y-4 overflow-hidden flex-col min-h-50 rounded-2xl bg-linear-to-br from-primary via-primary to-primary/80 pt-6">
          
             <div className="space-y-2">
                 <div className="center gap-4">
@@ -143,13 +143,13 @@ export default function WalletCard() {
       <div className="grid grid-cols-2 gap-4">
         <Link
           to="/fund-account"
-          className="btn bg-amber-500 dark:bg-foreground dark:text-main text-amber-100 font-semibold h-11 w-full rounded-xl px-4 text-sm"
+          className="btn dark:bg-foreground bg-background text-main border border-line font-semibold h-11 w-full rounded-xl px-4 text-sm"
         >
           Fund account <AddCircle size={20} variant="Bold" />
         </Link>
         <Link
           to="/withdraw"
-          className="btn h-11 w-full rounded-xl bg-green-500 text-white px-4 text-sm font-semibold hover:bg-green-600"
+          className="btn h-11 w-full rounded-xl dark:bg-foreground bg-background text-green-500 border border-line px-4 text-sm font-semibold hover:bg-green-600"
         >
           Withdraw <Send2 size={20} variant="Bold" />
         </Link>
