@@ -88,7 +88,7 @@ export default function Waitlist() {
         <div className="text-center space-y-2">
           <div className="center gap-2">
             <img src="/logo.svg" alt="" width={45} />
-            <h3 className="text-4xl text-primary font-bold">Questpay</h3>
+            <h3 className="text-4xl text-primary font-bold font-sans">Questpay</h3>
           </div>
           <p className="text-md text-muted">
             An ecosystem for all digital needs.
@@ -100,7 +100,7 @@ export default function Waitlist() {
               <li
                 key={service.name}
                 className={clsx(
-                  "inline-block cursor-pointer animate-bounce rounded-full border px-4 py-2 text-xs sm:text-sm md:text-base transition-all duration-300 ease-out hover:rotate-0",
+                  "inline-block cursor-pointer animate-bounce rounded-full border px-4 py-2 text-xs sm:text-sm transition-all duration-300 ease-out hover:rotate-0",
                   service.palette,
               idx % 2 === 1 ? "rotate-2" : "-rotate-2"
                 )}
@@ -115,7 +115,7 @@ export default function Waitlist() {
           onSubmit={handleSubmit(onSubmit)}
           className="max-w-[400px] mx-auto border-t border-line pt-4 space-y-4"
         >
-          <h3 className="text-xl font-bold">Join the waitlist</h3>
+          <h3 className="text-xl font-bold font-sans">Join the waitlist</h3>
           <InputWithoutIcon
             type="email"
             placeholder="Enter your email"

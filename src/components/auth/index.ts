@@ -1,0 +1,1 @@
+export { default as GoogleAuthBtn } from "./google-auth-btn";
