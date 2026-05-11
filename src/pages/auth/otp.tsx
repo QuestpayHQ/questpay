@@ -141,7 +141,7 @@ export default function VerifyOTP() {
     : "Enter the 5-digit code we sent to your email to continue.";
 
   return (
-    <AuthLayout title="Verify code" description={description}>
+    <AuthLayout title="Verify Email Address" description={description}>
       <form onSubmit={onSubmit} className="space-y-4">
         <div>
           <div className="flex gap-2 justify-center">
