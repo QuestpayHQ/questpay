@@ -230,3 +230,22 @@ button,
 .animate-scroll {
   animation: scroll 10s linear infinite;
 }
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+::selection {
+  background: var(--primary);
+  color: #fff;
+}
