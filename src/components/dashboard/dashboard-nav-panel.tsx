@@ -95,7 +95,7 @@ export default function DashboardNavPanel({
             No menu items match your search.
           </p>
         ) : (
-          <ul className="hide-scrollbar space-y-0.5 overflow-y-auto overscroll-contain pr-0.5 pb-2">
+          <ul className="hide-scrollbar space-y-2 overflow-y-auto overscroll-contain pr-0.5 pb-2">
             {filteredItems.map((item) => {
               const Icon = item.icon;
               return (

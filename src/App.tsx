@@ -10,7 +10,7 @@ import {
   ResetPassword,
   VerifyOTP,
 } from "./pages/auth";
-import { Dashboard } from "./pages/dashboard";
+import { AirtimePurchase, Dashboard, DataPurchase, Services } from "./pages/dashboard";
 
 export default function App() {
   return (
@@ -28,6 +28,11 @@ export default function App() {
           <Route path="verify-otp" element={<VerifyOTP />} />
         </Route>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/services">
+          <Route index element={<Services />} />
+          <Route path="data" element={<DataPurchase />} />
+          <Route path="airtime" element={<AirtimePurchase />} />
+        </Route>
       </Routes>
     </>
   );

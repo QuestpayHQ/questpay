@@ -46,17 +46,18 @@ export default function Dashboard() {
   return (
     <DashboardLayout>
       <main className="flex-1 space-y-10">
-        <header className="space-y-1">
-          <h1 className="font-sans text-2xl font-bold tracking-tight text-main sm:text-3xl">
-            Overview
-          </h1>
-          <p className="max-w-lg text-sm text-muted">
-            Balances, shortcuts, and your latest activity in one place.
-          </p>
-        </header>
-
-        {/* Wallet */}
-        <WalletCard />
+        <div className="space-y-4">
+          <header className="space-y-1">
+            <h1 className="font-sans text-2xl font-bold tracking-tight text-muted sm:text-3xl">
+              Hi, <span className="text-main">Gift</span>
+            </h1>
+            <p className="max-w-lg text-sm text-muted">
+              Balances, shortcuts, and your latest activity in one place.
+            </p>
+          </header>
+          {/* Wallet */}
+          <WalletCard />
+        </div>
 
         {/* Services */}
         <section className="space-y-3" aria-labelledby="services-heading">
