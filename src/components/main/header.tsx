@@ -16,8 +16,8 @@ export default function Header() {
                   <div className="flex items-center gap-10">
                       <ul className="hidden md:flex items-center gap-6 border-r border-line pr-10">
                         {navLinks.map((link) => (
-                          <li key={link.href}>
-                            <NavLink to={link.href} className="text-sm font-medium text-muted hover:text-primary hover:underline transition-all duration-300 ease-out">{link.label}</NavLink>
+                          <li key={link.to}>
+                            <NavLink to={link.to} className="text-sm font-medium text-muted hover:text-primary hover:underline transition-all duration-300 ease-out">{link.label}</NavLink>
                           </li>
                         ))}
                       </ul>

@@ -13,6 +13,7 @@ export const registerSchema = z.object({
     email: z.string().email().min(1, { message: "Email is required" }),
     phoneNumber: z.string().optional(),
     password: z.string().min(8, { message: "Password must be at least 8 characters" }),
+    referralCode: z.string().optional(),
 }).strict();
 
 export type RegisterSchema = z.infer<typeof registerSchema>;

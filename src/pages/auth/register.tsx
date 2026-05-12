@@ -72,6 +72,13 @@ export default function Register() {
           {...register("password")}
           error={errors.password?.message}
         />
+        <InputWithoutIcon
+          label="Referral Code (optional)"
+          type="text"
+          placeholder="e.g gift-123456"
+          {...register("referralCode")}
+          error={errors.referralCode?.message}
+        />
 
         <div>
           <div className="flex gap-2">
