@@ -7,5 +7,7 @@ export {default as ScrollToTop} from "./ScrollToTop";
 export {default as GobackButton} from "./GobackButton";
 export {default as Breadcrumbs} from "./breadcrumbs";
 export type { BreadcrumbItem } from "./breadcrumbs";
-export {default as Pattern} from "./pattern";
+export { default as Pattern } from "./pattern";
+export {default as Modal} from "./modal";
+export {default as NonCloseModal} from "./non-close-modal";
 

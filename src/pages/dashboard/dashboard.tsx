@@ -5,6 +5,7 @@ import {
   type ServiceItem,
 } from "@/constants/data";
 import { formatNumber } from "@/helpers/formatNumber";
+import { getTimeOfDayGreeting } from "@/helpers/getTimeOfDayGreeting";
 import { ArrowRight2 } from "iconsax-reactjs";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -48,12 +49,9 @@ export default function Dashboard() {
       <main className="flex-1 space-y-10">
         <div className="space-y-4">
           <header className="space-y-1">
-            <h1 className="font-sans text-2xl font-bold tracking-tight text-muted sm:text-3xl">
-              Hi, <span className="text-main">Gift</span>
+            <h1 className="font-sans text-2xl font-bold tracking-tight text-main sm:text-3xl">
+              {getTimeOfDayGreeting()}, <span className="text-muted">Gift 👋</span>
             </h1>
-            <p className="max-w-lg text-sm text-muted">
-              Balances, shortcuts, and your latest activity in one place.
-            </p>
           </header>
           {/* Wallet */}
           <WalletCard />

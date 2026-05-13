@@ -149,7 +149,7 @@ export const networkProviders = [
   {
     id: 2,
     title: "Airtel",
-    img: "/icons/airtel.svg",
+    img: "/icons/airtel-1.svg",
   },
   {
     id: 3,

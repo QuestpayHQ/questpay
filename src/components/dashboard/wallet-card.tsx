@@ -17,7 +17,14 @@ export default function WalletCard() {
       const ngnCardBalance = 10_000;
       const usdCardBalance = 17;
   return (
-    <div className="rounded-2xl bg-primary p-4 text-white shadow-lg shadow-primary/20 dark:shadow-none sm:p-4">
+    <div className="relative overflow-hidden rounded-2xl bg-primary p-4 text-white shadow-lg shadow-primary/25 dark:shadow-none sm:p-4">
+      {/* Single soft pink disk — center sits past the corner so only a curved “path” shows inside */}
+      <div
+        className="pointer-events-none absolute right-[-46%] top-[-40%] aspect-square w-[min(115vw,21rem)] rounded-full bg-pink-400/40 blur-[2.25rem] sm:right-[-40%] sm:top-[-36%] sm:w-88 sm:blur-[3.25rem]"
+        aria-hidden
+      />
+
+      <div className="relative z-1">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0 flex-1 space-y-0">
           <div className="flex items-center justify-between gap-3">
@@ -128,6 +135,7 @@ export default function WalletCard() {
         Balances update after each settled transaction. Withdrawable funds may
         require verification for large payouts.
       </p>
+      </div>
     </div>
   );
 }

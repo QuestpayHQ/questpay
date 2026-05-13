@@ -41,3 +41,6 @@ export const RECENT_TRANSACTIONS: {
     status: "success",
   },
 ];
+
+/** Placeholder until profile / auth provides the signed-in user's MSISDN */
+export const PROFILE_PHONE_LOCAL = "08031234567";
