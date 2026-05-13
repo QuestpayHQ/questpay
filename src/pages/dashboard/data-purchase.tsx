@@ -127,7 +127,7 @@ export default function DataPurchase() {
             { label: "Data Purchase" },
           ]}
           title="Buy data"
-          description="Pick your network, validity, and bundle — same flow as airtime."
+          description="Pick your network, validity, and bundle."
         />
 
         <section className="space-y-3" aria-labelledby="data-network-heading">

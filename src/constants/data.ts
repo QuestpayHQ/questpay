@@ -55,7 +55,7 @@ export const services = [
     link: "/services/airtime",
   },
   {
-    title: "Social Media Booost",
+    title: "Social Media Boost",
     description: "Boost your social media accounts easily and quickly",
     icon: Flash,
     color: "text-yellow-500 bg-yellow-500/10",
