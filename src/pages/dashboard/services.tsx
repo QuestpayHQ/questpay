@@ -79,7 +79,7 @@ export default function Services() {
               different keyword.
             </p>
           ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-1 gap-2">
+            <div className="space-y-10">
               {filteredCategories.map((category) => (
                 <section
                   key={category.id}
@@ -97,7 +97,7 @@ export default function Services() {
                       {category.description}
                     </p>
                   </div>
-                  <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  <ul className="grid gap-3 grid-cols-2">
                     {category.items.map((item) => {
                       const Icon = item.icon;
                       return (
