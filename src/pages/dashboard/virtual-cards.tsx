@@ -218,7 +218,7 @@ export default function VirtualCards() {
           </div>
         ) : (
           <section
-            className="space-y-6 bg-secondary/25 dark:bg-secondary/20 sm:p-6"
+            className="space-y-6 "
             aria-labelledby="empty-cards-heading"
           >
             {/* <div className="mx-auto max-w-lg space-y-2 text-center">

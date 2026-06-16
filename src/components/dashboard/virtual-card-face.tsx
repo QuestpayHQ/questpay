@@ -76,7 +76,7 @@ export default function VirtualCardFace({
   return (
     <div
       className={clsx(
-        "relative aspect-[1.586/1] w-full max-w-md overflow-hidden rounded-3xl p-5 text-white sm:p-6",
+        "relative aspect-[1.586/1] w-full max-w-full overflow-hidden rounded-3xl p-5 text-white sm:p-6",
         meta.gradient,
         meta.shadow,
       )}

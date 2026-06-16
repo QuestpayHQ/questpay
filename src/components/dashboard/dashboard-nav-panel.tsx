@@ -44,7 +44,7 @@ export default function DashboardNavPanel({
           className="flex min-w-0 items-center gap-2 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-white/50"
         >
           <img src="/logo.svg" alt="Questpay" width={35} height={35} />
-          <h3 className={`truncate font-sans text-2xl font-bold ${theme === "dark" ? "text-white" : "text-main"}`}>
+          <h3 className={`truncate font-sans text-xl font-bold ${theme === "dark" ? "text-white" : "text-main"}`}>
             Questpay
           </h3>
         </Link>
