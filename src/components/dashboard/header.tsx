@@ -16,7 +16,7 @@ export default function Header() {
         )}
       </AnimatePresence>
 
-      <header className="sticky w-full top-0 z-40 border-b border-line bg-background/80 dark:bg-secondary/90 backdrop-blur-md">
+      <header className="sticky w-full top-0 z-40 bg-background/80 backdrop-blur-md">
         <nav className="px-4 md:px-6 flex items-center justify-between h-[70px] w-full">
           <div className="lg:invisible visible flex items-center justify-center h-10 w-10 rounded-full bg-background dark:bg-foreground">
             <Menu size={20} onClick={() => setMenuOpen(true)} />

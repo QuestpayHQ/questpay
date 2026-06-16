@@ -1,34 +1,13 @@
 import { DashboardLayout } from "@/layout";
-import {
-  categoriesServices,
-  type ServiceCategory,
-  type ServiceItem,
-} from "@/constants/data";
+import { services } from "@/constants/data";
 import { formatNumber } from "@/helpers/formatNumber";
 import { getTimeOfDayGreeting } from "@/helpers/getTimeOfDayGreeting";
-import { ArrowRight2 } from "iconsax-reactjs";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { RECENT_TRANSACTIONS } from "@/constants/dummy";
 import { WalletCard } from "@/components/dashboard";
+import clsx from "clsx";
 
-const SERVICES_PREVIEW_COUNT = 4;
-
-/** First N services in category order (same coverage as former `services.slice(0, 4)`). */
-function servicePreviewByCategory(
-  max: number,
-): { category: ServiceCategory; items: ServiceItem[] }[] {
-  const rows: { category: ServiceCategory; items: ServiceItem[] }[] = [];
-  let remaining = max;
-  for (const category of categoriesServices) {
-    if (remaining <= 0) break;
-    const items = category.items.slice(0, remaining);
-    if (items.length === 0) continue;
-    rows.push({ category, items });
-    remaining -= items.length;
-  }
-  return rows;
-}
 
 function statusStyles(status: "success" | "pending" | "failed") {
   switch (status) {
@@ -42,7 +21,6 @@ function statusStyles(status: "success" | "pending" | "failed") {
 }
 
 export default function Dashboard() {
-  const previewByCategory = servicePreviewByCategory(SERVICES_PREVIEW_COUNT);
 
   return (
     <DashboardLayout>
@@ -70,7 +48,7 @@ export default function Dashboard() {
               to="/services"
               className="group inline-flex items-center gap-0.5 text-sm font-medium text-primary hover:underline"
             >
-              See all
+              Full Details
               <ChevronRight
                 size={16}
                 className="transition-transform group-hover:translate-x-0.5"
@@ -78,55 +56,14 @@ export default function Dashboard() {
               />
             </Link>
           </div>
-          <div className="space-y-6">
-            {previewByCategory.map(({ category, items }) => (
-              <div key={category.id} className="space-y-4">
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
-                  <p
-                    className={`w-fit rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide ${category.color}`}
-                  >
-                    {category.title}
-                  </p>
-                  <p className="text-xs text-muted sm:text-right sm:max-w-md">
-                    {category.description}
-                  </p>
+          <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {services.map((service) => (
+              <Link key={service.link} to={service.link} className="flex flex-col gap-2 bg-secondary items-center p-4 rounded-2xl">
+                <div className={clsx("flex items-center gap-2 size-9 center rounded-xl", service.color)}>
+                  <service.icon size={20} variant="Linear" aria-hidden />
                 </div>
-                <ul className="grid gap-3 grid-cols-2">
-                  {items.map((item) => {
-                    const Icon = item.icon;
-                    return (
-                      <li key={`${category.id}-${item.link}`}>
-                        <Link
-                          to={item.link}
-                          className="flex h-full flex-col gap-4 rounded-2xl border border-line bg-background p-4 transition-colors hover:border-primary/25 hover:bg-secondary/40 dark:bg-secondary/20"
-                        >
-                          <span
-                            className={`grid size-11 shrink-0 place-items-center rounded-lg ${item.color}`}
-                          >
-                            <Icon size={20} variant="Linear" aria-hidden />
-                          </span>
-                          <span className="min-w-0 flex-1">
-                            <span className="flex items-start justify-between gap-2">
-                              <span className="font-medium line-clamp-1 text-sm text-main">
-                                {item.title}
-                              </span>
-                              <ArrowRight2
-                                size={18}
-                                className="mt-0.5 shrink-0 text-muted"
-                                variant="Linear"
-                                aria-hidden
-                              />
-                            </span>
-                            <span className="mt-1 line-clamp-2 text-xs text-muted">
-                              {item.description}
-                            </span>
-                          </span>
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
+                <p className="text-sm font-medium text-main">{service.shortName}</p>
+              </Link>
             ))}
           </div>
         </section>

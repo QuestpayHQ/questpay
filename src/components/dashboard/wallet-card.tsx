@@ -1,6 +1,6 @@
 import { formatNumber } from '@/helpers/formatNumber';
 import { AddCircle, Send2 } from 'iconsax-reactjs';
-import { EyeOff, Eye, ChevronDown, Info } from 'lucide-react';
+import { EyeOff, Eye, ChevronDown } from 'lucide-react';
 import { useId, useState } from 'react'
 import { Link } from 'react-router-dom';
 
@@ -12,12 +12,10 @@ export default function WalletCard() {
       const [detailsOpen, setDetailsOpen] = useState(false);
 
       const totalBalance = 300_034;
-      const spendable = 150_000;
-      const withdrawable = 80_034;
       const ngnCardBalance = 10_000;
       const usdCardBalance = 17;
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-primary p-4 text-white shadow-lg shadow-primary/25 dark:shadow-none sm:p-4">
+    <div className="relative overflow-hidden rounded-3xl bg-primary p-4 text-white shadow-lg shadow-primary/25 dark:shadow-none sm:p-4">
       {/* Single soft pink disk — center sits past the corner so only a curved “path” shows inside */}
       <div
         className="pointer-events-none absolute right-[-46%] top-[-40%] aspect-square w-[min(115vw,21rem)] rounded-full bg-pink-400/40 blur-[2.25rem] sm:right-[-40%] sm:top-[-36%] sm:w-88 sm:blur-[3.25rem]"
@@ -97,21 +95,7 @@ export default function WalletCard() {
         hidden={!detailsOpen}
       >
         <dl className="grid grid-cols-2 gap-4 sm:grid-cols-2 sm:gap-8">
-          <div>
-            <dt className="text-xs font-medium text-white/70">Spendable</dt>
-            <dd className="mt-1 font-space text-lg font-semibold tabular-nums text-white">
-              ₦ {amountsVisible ? formatNumber(spendable) : MASKED_AMOUNT}
-            </dd>
-          </div>
-          <div>
-            <dt className="text-xs font-medium text-white/70 flex items-center gap-1">
-              Withdrawable{" "}
-              <Info size={16} aria-hidden className="cursor-pointer" />
-            </dt>
-            <dd className="mt-1 font-space text-lg font-semibold tabular-nums text-white">
-              ₦ {amountsVisible ? formatNumber(withdrawable) : MASKED_AMOUNT}
-            </dd>
-          </div>
+         
           <div>
             <dt className="text-xs font-medium text-white/70">
               NGN Card Balance

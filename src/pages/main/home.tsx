@@ -1,62 +1,41 @@
-import {
-  Services,
-  Transactions,
-  Settings,
-  WalletCard,
-} from "@/components/main";
-import clsx from "clsx";
-import { useState } from "react";
-
-const tabs = [
-  {
-    label: "Services",
-    value: "services",
-  },
-  {
-    label: "Transactions",
-    value: "transactions",
-  },
-  {
-    label: "Settings",
-    value: "settings",
-  },
-] as const;
+import { Link } from "react-router-dom";
 
 export default function Home() {
-  const [activeTab, setActiveTab] =
-    useState<(typeof tabs)[number]["value"]>("services");
-
   return (
-    <div className="dark:bg-background bg-secondary">
-      <div className="container space-y-6 pt-8">
-        <div>
-          <h3 className="text-2xl font-semibold text-muted">Hi, <span className="text-main">Jackson!</span> 👋</h3>
-          <p className="text-muted">Pay bills, boost your socials, and more with Questpay.</p>
+    <section className="h-dvh bg-linear-to-t from-violet-600 via-violet-800 to-pink-500">
+      <div className="max-w-md mx-auto w-[90%] h-dvh flex flex-col py-10">
+        <div className="center gap-2">
+          <img src="/white-logo.svg" alt="" className="size-9" />
+          <h3 className="text-2xl text-white font-bold font-sans">Questpay</h3>
         </div>
-        <WalletCard />
-        <section>
-          <div className="flex items-center gap-4">
-            {tabs.map((tab, idx) => (
-              <div
-                key={idx}
-                className={clsx(
-                  activeTab === tab.value
-                    ? "text-main border-b-2 border-white"
-                    : "text-muted border-transparent border-b-2",
-                  "cursor-pointer py-1 text-sm font-medium",
-                )}
-                onClick={() => setActiveTab(tab.value)}
-              >
-                <span>{tab.label}</span>
-              </div>
-            ))}
+
+        <div className=" mt-auto space-y-10">
+          <div className="space-y-2 text-center">
+            <h4 className="text-xl font-bold text-white font-sans">
+              Welcome to your digital hub
+            </h4>
+            <p className="text-sm text-white/80">
+              An ecosystem for all digital needs. Transfer to bank account, pay
+              bills, and more.
+            </p>
           </div>
 
-          {activeTab === "services" && <Services />}
-          {activeTab === "transactions" && <Transactions />}
-          {activeTab === "settings" && <Settings />}
-        </section>
+          <div className="flex flex-col md:flex-row gap-4">
+            <Link
+              to="/auth/register"
+              className="btn bg-white/30 text-sm font-semibold ring-2 ring-white/40 text-white rounded-full h-11 px-4 w-full"
+            >
+              Get Started
+            </Link>
+            <Link
+              to="/auth/login"
+              className="btn text-white rounded-full h-11 px-4 w-full ring-2 ring-white/40"
+            >
+              Login
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

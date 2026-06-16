@@ -164,8 +164,8 @@
   --foreground: #2a313c;
   --main: #fff;
   --muted: #999;
+  --line: #262b31;
   --primary: #8e82fc;
-  --line: #3d444d;
 }
 
 @theme inline {

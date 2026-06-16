@@ -42,6 +42,7 @@ export const navItems = [
 export const services = [
   {
     title: "Data Purchase",
+    shortName: "Data",
     description: "Purchase cheap data easily and quickly",
     icon: Wifi,
     color: "text-green-500 bg-green-500/10",
@@ -49,6 +50,7 @@ export const services = [
   },
   {
     title: "Airtime Purchase",
+    shortName: "Airtime",
     description: "Purchase cheap airtime easily and quickly",
     icon: CallCalling,
     color: "text-blue-500 bg-blue-500/10",
@@ -56,6 +58,7 @@ export const services = [
   },
   {
     title: "Social Media Boost",
+    shortName: "SMM",
     description: "Boost your social media accounts easily and quickly",
     icon: Flash,
     color: "text-yellow-500 bg-yellow-500/10",
@@ -63,6 +66,7 @@ export const services = [
   },
   {
     title: "Social Accounts",
+    shortName: "Accounts",
     description: "Buy verified social media accounts securely",
     icon: ShoppingCart,
     color: "text-emerald-500 bg-emerald-500/10",
@@ -70,6 +74,7 @@ export const services = [
   },
   {
     title: "Numbers & eSIM",
+    shortName: "Numbers",
     description: "Get virtual numbers for SMS verification & rentals",
     icon: CallCalling,
     color: "text-cyan-500 bg-cyan-500/10",
@@ -77,6 +82,7 @@ export const services = [
   },
   {
     title: "Virtual Cards",
+    shortName: "Cards",
     description: "Create and manage virtual debit cards",
     icon: Card,
     color: "text-amber-500 bg-amber-500/10",
@@ -84,6 +90,7 @@ export const services = [
   },
   {
     title: "Sell Giftcard",
+    shortName: "Giftcard",
     description: "Sell giftcards easily and quickly",
     icon: BitcoinRefresh,
     color: "text-pink-500 bg-pink-500/10",

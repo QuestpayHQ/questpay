@@ -133,11 +133,11 @@ export default function AirtimePurchase() {
                       <Check size={14} strokeWidth={3} aria-hidden />
                     </span>
                   ) : null}
-                  <span className="relative grid size-14 place-items-center rounded-xl bg-white dark:bg-foreground">
+                  <span className="relative grid md:size-14 size-9 place-items-center rounded-xl">
                     <img
                       src={provider.img}
                       alt=""
-                      className="max-h-9 max-w-13 object-contain"
+                      className="md:size-10 size-7 rounded-lg object-contain"
                     />
                   </span>
                   <span className="text-center text-sm font-medium text-main">
@@ -163,7 +163,7 @@ export default function AirtimePurchase() {
             ref={detailsSectionRef}
             id="airtime-details-section"
             onSubmit={handleSubmit}
-            className="scroll-mt-20 space-y-6 rounded-2xl bg-background dark:bg-secondary p-4"
+            className="scroll-mt-20 space-y-6 rounded-2xl border border-line bg-background dark:bg-secondary p-4"
           >
             <div className="flex flex-wrap items-center justify-between gap-2">
               <p className="text-sm text-muted">
@@ -195,6 +195,7 @@ export default function AirtimePurchase() {
                 value={phone}
                 onChange={(e) => handlePhoneChange(e.target.value)}
                 error={phoneError}
+                className="bg-foreground"
               />
               <button
                 type="button"
@@ -217,6 +218,7 @@ export default function AirtimePurchase() {
               value={amount}
               onChange={(e) => handleAmountChange(e.target.value)}
               error={amountError}
+              className="bg-foreground"
             />
 
             <ButtonWithLoader

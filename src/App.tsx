@@ -10,7 +10,14 @@ import {
   ResetPassword,
   VerifyOTP,
 } from "./pages/auth";
-import { AirtimePurchase, Dashboard, DataPurchase, Services } from "./pages/dashboard";
+import {
+  AirtimePurchase,
+  CreateVirtualCard,
+  Dashboard,
+  DataPurchase,
+  Services,
+  VirtualCards,
+} from "./pages/dashboard";
 
 export default function App() {
   return (
@@ -32,6 +39,10 @@ export default function App() {
           <Route index element={<Services />} />
           <Route path="data" element={<DataPurchase />} />
           <Route path="airtime" element={<AirtimePurchase />} />
+          <Route path="cards">
+            <Route index element={<VirtualCards />} />
+            <Route path="create" element={<CreateVirtualCard />} />
+          </Route>
         </Route>
       </Routes>
     </>

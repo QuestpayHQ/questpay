@@ -157,11 +157,11 @@ export default function DataPurchase() {
                       <Check size={14} strokeWidth={3} aria-hidden />
                     </span>
                   ) : null}
-                  <span className="relative grid size-14 place-items-center rounded-xl bg-white dark:bg-foreground">
+                  <span className="relative grid md:size-14 size-9 place-items-center rounded-xl">
                     <img
                       src={provider.img}
                       alt=""
-                      className="max-h-9 max-w-13 object-contain"
+                      className="md:size-10 size-7 rounded-lg object-contain"
                     />
                   </span>
                   <span className="text-center text-sm font-medium text-main">
@@ -220,6 +220,7 @@ export default function DataPurchase() {
                 value={phone}
                 onChange={(e) => handlePhoneChange(e.target.value)}
                 error={phoneError}
+                className="bg-foreground"
               />
               <button
                 type="button"
@@ -250,7 +251,7 @@ export default function DataPurchase() {
                         "rounded-xl cursor-pointer border px-3 py-2.5 text-center text-sm transition-colors",
                         active
                           ? "border-emerald-500 bg-emerald-500/15 text-emerald-900 ring-2 ring-emerald-500/30 dark:text-emerald-100"
-                          : "border-line bg-background text-main hover:border-emerald-500/40 hover:bg-secondary/50 dark:bg-secondary/20",
+                          : "border-line bg-secondary text-main hover:border-emerald-500/40 hover:bg-secondary/50 dark:bg-foreground",
                       )}
                     >
                       {opt.label}
@@ -286,7 +287,7 @@ export default function DataPurchase() {
                         "relative flex min-h-[108px] flex-col items-center justify-center rounded-2xl border px-3 py-3 text-center transition-all",
                         isSelected
                           ? "border-emerald-500 bg-emerald-500/10 shadow-md shadow-emerald-500/10 ring-2 ring-emerald-500/35"
-                          : "border-line bg-background hover:border-emerald-400/50 hover:bg-secondary/40 dark:bg-secondary/25",
+                          : "border-line bg-secondary hover:border-emerald-400/50 hover:bg-secondary/40 dark:bg-foreground",
                       )}
                     >
                       {plan.tag ? (
